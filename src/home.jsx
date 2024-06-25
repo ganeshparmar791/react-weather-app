@@ -12,7 +12,7 @@ export default function Home() {
     speed: '',
     description: '--',
   });
-  const [name, setName] = useState('');
+  const [name, setName] = useState('jaipur');
   const [iconUrl, setIconUrl] = useState('');
 
   const handleClick = () => {
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="error">
             <p>{error}</p>
           </div>
-          <img src={iconUrl} alt="cloud_img" className="icon" />
+          <img src={iconUrl? (iconUrl):("../public/images/clouds.png")} alt="cloud_img" className="icon" />
           <div className="data">
             <h1>{Math.round(data.celcius)}°C</h1>
             <p className="description">{data.description}</p>
